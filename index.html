@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pièce Unique – Boho Chic Furniture</title>
-    <link rel="stylesheet" href="https://sharffudeen47.github.io/pieceUnique/css/reset.css">
-    <link rel="stylesheet" href="https://sharffudeen47.github.io/pieceUnique/css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -13,8 +13,7 @@
 <header>
     <div class="container nav">
         <a href="#top" class="logo">
-            <img src="https://github.com/sharffudeen47/pieceUnique/blob/main/Images/logo/PU_logo_dark.png" alt="Pièce Unique Logo">
-<!--            <span>Pièce Unique</span>-->
+            <img src="Images/logo/PU_logo_dark.png" alt="Pièce Unique Logo" />
         </a>
         <nav class="links">
             <a href="#home">Home</a>
@@ -33,9 +32,9 @@
         <div class="container">
             <div class="slider" data-autoplay="true" data-interval="5000">
                 <div class="slides">
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop" alt=""></div>
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt=""></div>
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1600&auto=format&fit=crop" alt=""></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop" alt="Slide 1" /></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt="Slide 2" /></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1600&auto=format&fit=crop" alt="Slide 3" /></div>
                 </div>
                 <button class="slider-btn prev">❮</button>
                 <button class="slider-btn next">❯</button>
@@ -64,9 +63,9 @@
             <h2>Our Collection</h2>
             <div class="slider" data-dots="true">
                 <div class="slides">
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop" alt=""></div>
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1600&auto=format&fit=crop" alt=""></div>
-                    <div class="slide"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1600&auto=format&fit=crop" alt=""></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop" alt="Gallery 1" /></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1600&auto=format&fit=crop" alt="Gallery 2" /></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1600&auto=format&fit=crop" alt="Gallery 3" /></div>
                 </div>
                 <button class="slider-btn prev">❮</button>
                 <button class="slider-btn next">❯</button>
@@ -85,9 +84,15 @@
 </main>
 
 <footer>
-    <div class="container">© <span id="year"></span> Pièce Unique. All rights reserved.</div>
+    <div class="container">
+        © <span id="year"></span> Pièce Unique. All rights reserved.
+    </div>
 </footer>
 
-<script src="https://sharffudeen47.github.io/pieceUnique/js/script.js"></script>
+<script src="js/script.js"></script>
+<script>
+    // Auto-update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

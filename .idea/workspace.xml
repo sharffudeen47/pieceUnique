@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="making the git (image)" />
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="email id changed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +34,9 @@
     "accountId": "3983a9b8-1ba6-4f8c-a495-8e72650b4e1c"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -76,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756929226307</updated>
-      <workItem from="1756929227404" duration="5794000" />
+      <workItem from="1756929227404" duration="6615000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -118,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756935055102</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="email id changed">
+      <option name="closed" value="true" />
+      <created>1756935322586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756935322586</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +141,7 @@
     <MESSAGE value="making the first page" />
     <MESSAGE value="making the git" />
     <MESSAGE value="making the git (image)" />
-    <option name="LAST_COMMIT_MESSAGE" value="making the git (image)" />
+    <MESSAGE value="email id changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="email id changed" />
   </component>
 </project>
