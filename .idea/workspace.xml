@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="email id changed">
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="some link changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/more.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sharffudeen47"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sharffudeen47&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sharffudeen47/pieceUnique.git",
-    "accountId": "3983a9b8-1ba6-4f8c-a495-8e72650b4e1c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sharffudeen47/pieceUnique.git&quot;,
+    &quot;accountId&quot;: &quot;3983a9b8-1ba6-4f8c-a495-8e72650b4e1c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -81,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756929226307</updated>
-      <workItem from="1756929227404" duration="6615000" />
+      <workItem from="1756929227404" duration="7528000" />
+      <workItem from="1757065515277" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -131,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756935322586</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="some link changes">
+      <option name="closed" value="true" />
+      <created>1756936143378</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756936143378</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +154,7 @@
     <MESSAGE value="making the git" />
     <MESSAGE value="making the git (image)" />
     <MESSAGE value="email id changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="email id changed" />
+    <MESSAGE value="some link changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some link changes" />
   </component>
 </project>
