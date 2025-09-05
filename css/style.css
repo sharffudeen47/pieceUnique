@@ -1,93 +1,285 @@
+/* =========================
+   Theme & Base
+========================= */
+:root {
+    --bg: #ffffff;
+    --fg: #111;
+    --muted: #666;
+    --accent: #222;
+    --link: #111;
+    --link-hover: #444;
+    --border: #eee;
 
-
-/* Theme & Base */
-:root{
-    --bg:#ffffff; --fg:#111; --muted:#666; --accent:#222;
-    --link:#111; --link-hover:#444; --border:#eee;
+    /* Heights */
+    --hero-height: 750px;                      /* #home hero slider height */
+    --gallery-height: calc(var(--hero-height) / 3); /* 1/3 of hero = 250px */
 }
 
-*{box-sizing:border-box}
+* { box-sizing: border-box; }
 
-body{
-    margin:0;
-    font-family:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-    color:var(--fg);
-    background:var(--bg);
-    line-height:1.5;
+body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.5;
 }
 
-a{color:var(--link);text-decoration:none}
-a:hover{color:var(--link-hover)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover { color: var(--link-hover); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-h1,h2{
-    margin:0 0 14px;
-    letter-spacing:0.02em;            /* replaces .3px to avoid sub-pixel warning */
-    font-family:"Playfair Display", serif;
+h1, h2 {
+    margin: 0 0 14px;
+    letter-spacing: 0.02em;
+    font-family: "Playfair Display", serif;
 }
 
-p{margin:0 0 12px}
-section{padding:56px 0}
+p { margin: 0 0 12px; }
+section { padding: 56px 0; }
 
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
-.section-narrow{max-width:900px;margin:0 auto}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.section-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-/* Header & Nav */
-header{
-    position:sticky;top:20px;z-index:50;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:saturate(180%) blur(8px);
-    border-bottom:1px solid var(--border);
+/* =========================
+   Header & Nav
+========================= */
+header {
+    position: sticky;
+    top: 20px;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;height:110px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700}
-.logo img{height:90px}
-.links{display:flex;gap:18px}
-.links a{position:relative;padding:6px 2px}
-.links a::after{
-    content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;
-    background:transparent;transform:scaleX(0);transition:background .2s, transform .2s;
-}
-.links a:hover::after{background:var(--accent);transform:scaleX(1)}
 
-/* Buttons & Intro */
-.btn{
-    display:inline-block;margin-top:10px;padding:10px 16px;
-    border:1px solid var(--accent);border-radius:10px;font-weight:600
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
 }
-.btn:hover{background:#111;color:#fff}
-.intro{background:#fafafa;border:1px solid var(--border);border-radius:12px;padding:24px}
 
-/* Slider */
-.slider{
-    position:relative;overflow:hidden;border-radius:12px;
-    box-shadow:0 8px 24px rgba(0,0,0,.07)
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
 }
-.slides{display:flex;transition:transform .5s ease}
-.slide{
-    position:relative;min-width:100%;height:750px;display:grid;place-items:center;background:#f3f3f3
+.logo img { height: 90px; }
+
+.links {
+    display: flex;
+    gap: 18px;
 }
-.slide img{width:100%;height:100%;object-fit:cover}
-.slider-btn{
-    position:absolute;top:50%;transform:translateY(-50%);
-    border:none;background:rgba(0,0,0,.35);color:#fff;font-size:20px;
-    padding:10px 14px;border-radius:999px;cursor:pointer
+.links a {
+    position: relative;
+    padding: 6px 2px;
 }
-.slider-btn:hover{background:rgba(0,0,0,.55)}
-.slider .prev{left:10px}
-.slider .next{right:10px}
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -2px;
+    height: 2px;
+    background: transparent;
+    transform: scaleX(0);
+    transition: background .2s, transform .2s;
+}
+.links a:hover::after {
+    background: var(--accent);
+    transform: scaleX(1);
+}
+
+/* =========================
+   Buttons & Intro
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    font-weight: 600;
+}
+.btn:hover { background: #111; color: #fff; }
+
+.intro {
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* =========================
+   Slider (Base)
+========================= */
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .07);
+}
+.slides {
+    display: flex;
+    transition: transform .5s ease;
+}
+.slide {
+    position: relative;
+    min-width: 100%;
+    display: grid;
+    place-items: center;
+    background: #f3f3f3;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.slider-btn:hover { background: rgba(0, 0, 0, .55); }
+.slider .prev { left: 10px; }
+.slider .next { right: 10px; }
 
 /* Dots */
-.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
-.dot{width:10px;height:10px;border-radius:50%;border:1px solid #999;background:#ddd;cursor:pointer}
-.dot.active{background:#333;border-color:#333}
-
-/* Hero text on slides */
-.hero-text{
-    position:absolute;left:30px;bottom:30px;color:#000;z-index:2;
-    display:flex;flex-direction:column;align-items:flex-start
+.dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 12px;
 }
-.hero-text h1{margin:0 0 8px;font-size:2.2rem;font-weight:700}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    background: #ddd;
+    cursor: pointer;
+}
+.dot.active {
+    background: #333;
+    border-color: #333;
+}
 
-/* Footer */
-footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
+/* =========================
+   Hero Text (on slides)
+========================= */
+.hero-text {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #000; /* switch to #fff if your images are dark */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero-text h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* =========================
+   Slider Specializations
+========================= */
+
+/* HERO slider: 1 per view, fixed tall height */
+.slider-hero .slide {
+    min-width: 100%;
+    height: var(--hero-height);
+}
+
+/* --- GALLERY slider (updated with requested square tiles & spacing) --- */
+
+/* Make room for arrows and add spacing look */
+.slider-gallery {
+    padding: 0 40px;                 /* space for arrows */
+}
+
+/* Gap between tiles (fallback; JS may override via data-gap) */
+.slider-gallery .slides {
+    gap: 16px;
+}
+
+/* Square-ish tiles; height follows width */
+.slider-gallery .slide {
+    /* override earlier generic slide sizing for gallery */
+    min-width: auto;                 /* width handled by JS via flex-basis */
+    height: auto;
+    aspect-ratio: 1 / 1;             /* square tiles */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+/* Images fill the square */
+.slider-gallery .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrows sit flush at the sides for gallery */
+.slider-gallery .prev { left: 8px; }
+.slider-gallery .next { right: 8px; }
+
+/* Larger, spaced dots like the reference */
+.slider-gallery .dots { margin-top: 14px; }
+.slider-gallery .dot {
+    width: 8px; height: 8px; opacity: .4;
+}
+.slider-gallery .dot.active { opacity: 1; }
+
+/* Optional cosmetics for the gallery section wrapper */
+#gallery {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .07);
+    padding-top: 56px; /* keep section spacing */
+}
+
+/* =========================
+   Responsive per-view for gallery
+   (JS sets inline flex-basis per view, e.g., 33.333% for 3-up)
+   Override on smaller screens with !important.
+========================= */
+@media (max-width: 900px) {
+    /* 2 per view on tablets */
+    .slider-gallery.multi .slide { flex: 0 0 50% !important; }
+}
+@media (max-width: 600px) {
+    /* 1 per view on phones */
+    .slider-gallery.multi .slide { flex: 0 0 100% !important; }
+}
