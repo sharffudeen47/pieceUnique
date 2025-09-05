@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/footer.css" />
 </head>
-<body>
-
+<body id="top">
 <!-- Header -->
-<header>
+<header class="site-header" role="banner">
     <div class="container nav">
-        <a href="#top" class="logo">
-            <img src="Images/logo/PU_logo_dark.png" alt="Pièce Unique Logo" />
+        <a href="#top" class="logo" aria-label="Pièce Unique – Home">
+            <img src="Images/logo/PU_logo_dark.png" alt="Pièce Unique Logo" height="90" />
         </a>
-        <nav class="links">
+        <nav class="links" role="navigation" aria-label="Primary">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
@@ -27,115 +26,117 @@
     </div>
 </header>
 
-<main id="top">
-
-    <!-- HOME / Slider #1 -->
-    <section id="home">
+<main>
+    <!-- HERO / Slider -->
+    <section id="home" class="section">
         <div class="container">
-            <div class="slider" data-autoplay="true" data-interval="3000">
-                <div class="slides">
+            <div class="slider slider-hero" data-autoplay="true" data-interval="3000" data-dots="true">
+                <div class="slides" aria-live="polite">
                     <div class="slide">
-                        <img src="Images/2021/01/shutterstock_715249594-2-scaled.jpg" alt="shutterstock_715249594">
+                        <img src="Images/2021/01/shutterstock_715249594-2-scaled.jpg" alt="Warm boho living room with textured décor" />
                         <div class="hero-text">
-                            <h1>UNIEKE COMBINATIE</h1>
-                            <h1>MODERN & ETNISCH</h1>
+                            <h1>Unieke combinatie</h1>
+                            <h1>Modern & Ethisch</h1>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="Images/2021/03/buffalo-leather-chair-in-apartment-P6D3KMB-scaled-1.jpg" alt="buffalo-leather-chair">
+                        <img src="Images/2021/03/buffalo-leather-chair-in-apartment-P6D3KMB-scaled-1.jpg" alt="Buffalo leather chair in a chic interior" />
                         <div class="hero-text">
-                            <h1>PIECE UNIQUE </h1>
-                            <h1>INTERIOR DESIGN </h1>
+                            <h1>Pièce Unique</h1>
+                            <h1>Interior Design</h1>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="Images/2021/01/shutterstock_715249594-2-scaled.jpg" alt="shutterstock_715249594">
+                        <img src="Images/2021/01/shutterstock_715249594-2-scaled.jpg" alt="Authentic textures and natural materials" />
                         <div class="hero-text">
-                            <h1>TOTAALCONCEPTEN </h1>
-                            <h1>CHIC & AUTHENTIEK</h1>
+                            <h1>Totaalconcepten</h1>
+                            <h1>Chic & Authentiek</h1>
                         </div>
                     </div>
                 </div>
-                <button class="slider-btn prev">❮</button>
-                <button class="slider-btn next">❯</button>
+                <button class="slider-btn prev" aria-label="Previous slide">❮</button>
+                <button class="slider-btn next" aria-label="Next slide">❯</button>
+                <!-- dots injected by JS -->
             </div>
         </div>
-
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="section">
         <div class="container section-narrow">
             <div class="intro">
-                <h2>PIÈCE UNIQUE</h2>
-                <p><strong>UNIQUE BOHO CHIC DESIGN FURNITURE IN BRUGES</strong></p>
+                <h2>Pièce Unique</h2>
+                <p><strong>Unique boho chic design furniture in Bruges</strong></p>
                 <p>
-                    Welcome to Pièce Unique, a unique collection of boho chic design furniture in Bruges.
-                    Each piece is an authentic treasure, designed or hand-picked by us...
+                    Welcome to Pièce Unique, a curated collection of boho chic design furniture in Bruges.
+                    Each piece is an authentic treasure, designed or hand-picked by us.
                 </p>
-                <a class="btn" href="more.html">READ MORE</a>
+                <a class="btn" href="more.html">Read More</a>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY / Slider #2 -->
-    <section id="gallery">
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
         <div class="container">
             <h2>Our Collection</h2>
             <div class="slider slider-gallery" data-dots="true" data-per-view="3" data-gap="16">
-                <div class="slides">
+                <div class="slides" aria-live="polite">
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop" alt="Gallery 1" />
+                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 1" />
                     </div>
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1600&auto=format&fit=crop" alt="Gallery 2" />
+                        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 2" />
                     </div>
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1600&auto=format&fit=crop" alt="Gallery 3" />
+                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 3" />
                     </div>
                     <!-- Add more slides as needed -->
                 </div>
-                <button class="slider-btn prev">❮</button>
-                <button class="slider-btn next">❯</button>
+                <button class="slider-btn prev" aria-label="Previous items">❮</button>
+                <button class="slider-btn next" aria-label="Next items">❯</button>
+                <!-- dots injected by JS -->
             </div>
         </div>
     </section>
 
+<!--    &lt;!&ndash; CONTACT (basic anchor target for nav) &ndash;&gt;-->
+<!--    <section id="contact" class="section">-->
+<!--        <div class="container section-narrow">-->
+<!--            <div class="intro">-->
+<!--                <h2>Contact</h2>-->
+<!--                <p><strong>PATHOEKEWEG 32 C, 8000 Bruges</strong></p>-->
+<!--                <p><a href="mailto:info@pieceuniquedesign.com">info@pieceuniquedesign.com</a></p>-->
+<!--                <p>Woe & Zat: 14:00–17:30 — overige momenten op afspraak.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 </main>
+
+<!-- Footer -->
 <footer class="site-footer">
     <div class="container footer-grid">
-        <!-- Left: Logo -->
         <div class="footer-col">
-            <img src="Images/logo/PU_logo_dark.png" alt="Pièce Unique Footer Logo" />
+            <img class="footer-logo" src="Images/logo/PU_logo_dark.png" alt="Pièce Unique Footer Logo" />
         </div>
-
-        <!-- Middle: Get in Touch -->
         <div class="footer-col">
-            <h3>GET IN TOUCH</h3>
+            <h3>Get in Touch</h3>
             <p>PATHOEKEWEG 32 C, 8000 BRUGES</p>
             <p><a href="mailto:info@pieceuniquedesign.com">info@pieceuniquedesign.com</a></p>
         </div>
-
-        <!-- Right: Opening Hours -->
         <div class="footer-col">
-            <h3>OPENINGSUREN</h3>
+            <h3>Openingsuren</h3>
             <p>Woe en Zat van 14u tot 17u30</p>
-            <p>De rest op afspraak.</p>
-            <p><span class="icon">💬</span> Bel Ons</p>
+            <p>De rest op afspraak</p>
+            <p aria-label="Bel ons">💬 Bel Ons</p>
         </div>
     </div>
-
-    <!-- Bottom -->
     <div class="container footer-bottom">
         <p>© <span id="year"></span> pieceuniquedesign.</p>
     </div>
 </footer>
 
-
-<script src="js/script.js"></script>
-<script>
-    // Auto-update year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<!-- Scripts -->
+<script src="/js/script.js"></script>
 </body>
 </html>
