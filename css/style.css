@@ -42,7 +42,7 @@ p { margin: 0 0 12px; }
 section { padding: 56px 0; }
 
 .container {
-    max-width: 1100px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 16px;
 }
@@ -283,3 +283,5 @@ footer {
     /* 1 per view on phones */
     .slider-gallery.multi .slide { flex: 0 0 100% !important; }
 }
+
+

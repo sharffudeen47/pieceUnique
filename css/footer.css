@@ -1,0 +1,77 @@
+/* =========================
+   Footer Styles
+========================= */
+.site-footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 40px 0 20px;
+    font-size: 0.95rem;
+    color: #333;
+    font-family: "Montserrat", system-ui, sans-serif;
+}
+
+/* Grid layout for the 3 main columns */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Columns */
+.footer-col h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    color: #a48a5d; /* gold accent */
+}
+.footer-col img {
+    max-height: 90px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.footer-col p {
+    margin: 4px 0;
+    color: #111;
+}
+
+.footer-col a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: #444;
+}
+
+/* Logo */
+.footer-logo {
+    max-height: 70px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Bottom line */
+.footer-bottom {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
