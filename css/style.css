@@ -11,7 +11,7 @@
     --border: #eee;
 
     /* Heights */
-    --hero-height: 750px;                      /* #home hero slider height */
+    --hero-height: 650px;                      /* #home hero slider height */
     --gallery-height: calc(var(--hero-height) / 3); /* 1/3 of hero = 250px */
 }
 
@@ -131,7 +131,7 @@ header {
 }
 .slides {
     display: flex;
-    transition: transform .5s ease;
+    transition: transform .3s ease;
 }
 .slide {
     position: relative;
@@ -215,8 +215,11 @@ footer {
 ========================= */
 
 /* HERO slider: 1 per view, fixed tall height */
+.slider-hero .slides,
 .slider-hero .slide {
-    min-width: 100%;
+    height: 100%;
+}
+.slider-hero {
     height: var(--hero-height);
 }
 
