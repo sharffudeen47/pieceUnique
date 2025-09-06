@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="added the slide show image and made the slide image(1) abit bigger" />
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="fixing images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +90,7 @@
       <updated>1756929226307</updated>
       <workItem from="1756929227404" duration="7528000" />
       <workItem from="1757065515277" duration="3418000" />
-      <workItem from="1757156182475" duration="1775000" />
+      <workItem from="1757156182475" duration="2635000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -188,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757157502543</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixing images">
+      <option name="closed" value="true" />
+      <created>1757158168955</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757158168955</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +234,7 @@
     <MESSAGE value="minor changes(need to edit the height of the image)" />
     <MESSAGE value="perfectly working website" />
     <MESSAGE value="added the slide show image and made the slide image(1) abit bigger" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the slide show image and made the slide image(1) abit bigger" />
+    <MESSAGE value="fixing images" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing images" />
   </component>
 </project>
