@@ -7,25 +7,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-
 </head>
 <body>
+
+<!-- simple header (lighter nav than home) -->
 <header class="site-header">
     <div class="container nav">
         <a href="index.html" class="logo" aria-label="Back to Home">← Pièce Unique</a>
         <nav class="links" aria-label="Secondary">
-            <a href="index.html#about">Back to About</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#gallery">Gallery</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
     </div>
 </header>
 
-<main class="container section-narrow">
-    <h1>Our Story</h1>
-    <p>
-        Pièce Unique curates and creates boho chic furniture that blends modern lines
-        with artisanal craftsmanship from around the world. We design in Bruges,
-        collaborate with skilled partners, and bring each treasure directly to you.
-    </p>
+<main>
+    <!-- HERO (static image + translucent band) -->
+    <section class="hero-static" aria-label="Brand hero">
+        <img src="Images/gulfnews_import_magazines_insideout_1337_4CFEC33E-5636-402D-B35B-5592CEEC9929_large.jpg" alt="" />
+        <div class="hero-band">
+            <h1>Pièce Unique</h1>
+            <h1>Exclusive Boho Chic Design Furniture in Bruges</h1>
+        </div>
+    </section>
+
+    <!-- LEDE -->
+    <section class="section">
+        <div class="container section-narrow">
+            <p class="lede">
+                Pièce Unique curates and creates boho chic furniture that blends modern lines
+                with artisanal craftsmanship from around the world. We design in Bruges,
+                collaborate with skilled partners, and bring each treasure directly to you.
+            </p>
+        </div>
+    </section>
+
+    <!-- FEATURE 1 -->
+    <section class="section section--tight">
+        <div class="container feature">
+            <div class="feature__text">
+                <h2>Harmoniously<br/>Merging Worlds</h2>
+                <p>
+                    We let the culture of here merge with the culture of elsewhere—our native Morocco.
+                    Our life experiences shape our designs: childhood in Marrakesh’s stylish design
+                    environment, arriving in Belgium, and embracing its precision. Our training in
+                    graphic design, interior design, and photography, plus fashion-world experience,
+                    all come together. Beauty and design come first in everything we do.
+                </p>
+            </div>
+            <div class="feature__media">
+                <img src="Images/gulfnews_import_magazines_insideout_1337_4CFEC33E-5636-402D-B35B-5592CEEC9929_large.jpg" alt="Emerald green velvet sofa" />
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE 2 (alternating layout) -->
+    <section class="section">
+        <div class="container feature feature--alt">
+            <div class="feature__media">
+                <img src="Images/sections/sofa-cream.png" alt="Cream tufted sofa" />
+            </div>
+            <div class="feature__text">
+                <h2>Fairplay on Fairpay</h2>
+                <p>
+                    Our pieces fit antique and modern interiors—exclusive yet accessible.
+                    For us, business means fair play and fair pay. We benefit from our work,
+                    and we make sure partners benefit, too. We know everyone we work with
+                    personally. That matters.
+                </p>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="site-footer">
