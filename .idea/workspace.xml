@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="making the about us page">
-      <change afterPath="$PROJECT_DIR$/Gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/more.html" afterDir="false" />
-    </list>
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="added the footer for about us" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +91,7 @@
       <workItem from="1756929227404" duration="7528000" />
       <workItem from="1757065515277" duration="3418000" />
       <workItem from="1757156182475" duration="9599000" />
-      <workItem from="1757330689106" duration="2016000" />
+      <workItem from="1757330689106" duration="2339000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -218,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757162640410</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added images and more section for the about you page">
+      <option name="closed" value="true" />
+      <created>1757333827305</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1757333827305</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added the footer for about us">
+      <option name="closed" value="true" />
+      <created>1757333939440</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1757333939440</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +270,8 @@
     <MESSAGE value="fixing images" />
     <MESSAGE value="added the css and edited abit of our story" />
     <MESSAGE value="making the about us page" />
-    <option name="LAST_COMMIT_MESSAGE" value="making the about us page" />
+    <MESSAGE value="added images and more section for the about you page" />
+    <MESSAGE value="added the footer for about us" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the footer for about us" />
   </component>
 </project>
