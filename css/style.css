@@ -387,3 +387,79 @@ p{ margin:0 0 12px; }
     .feature__media{ order: 2; }
     .feature--alt .feature__media{ order: 2; } /* keep text first on mobile */
 }
+
+
+/* waroom met ons */
+
+/* Overline + gold title */
+.overline{
+    margin: 8px 0 6px;
+    font-size: .78rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #777;
+}
+.section-title-gold{
+    font-family: "Playfair Display", serif;
+    color: #a48a5d;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 700;
+    line-height: 1.15;
+    font-size: clamp(1.5rem, 3.4vw, 2.6rem);
+    margin: 6px 0 28px;
+}
+
+/* Four-column reasons grid */
+.reasons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 48px);
+    margin-top: clamp(16px, 2vw, 24px);
+}
+.reason__title{
+    font-size: .92rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #111;
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+.reason p{
+    color: #555;
+    line-height: 1.9;
+    font-size: clamp(.98rem, .2vw + .95rem, 1.05rem);
+}
+
+/* Responsive stacking */
+@media (max-width: 1100px){
+    .reasons{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px){
+    .reasons{ grid-template-columns: 1fr; }
+}
+
+/* Optional: keep hero strip consistent with other pages */
+.hero-static{
+    position: relative;
+    height: clamp(300px, 48vh, 560px);
+    overflow: hidden;
+}
+.hero-static img{
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+}
+.hero-band{
+    position: absolute; left:0; right:0; top: 18%;
+    background: rgba(255, 255, 255, 0.32);
+    backdrop-filter: saturate(150%) blur(2px);
+    padding: 18px 0; text-align: center;
+}
+.hero-band h1{
+    margin: .25rem 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: clamp(1.1rem, 3.2vw, 2.2rem);
+}
