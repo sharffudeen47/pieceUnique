@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="made the why with us page">
-      <change beforePath="$PROJECT_DIR$/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/more.html" afterDir="false" />
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="minor changes">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1756929227404" duration="7528000" />
       <workItem from="1757065515277" duration="3418000" />
       <workItem from="1757156182475" duration="9599000" />
-      <workItem from="1757330689106" duration="5546000" />
+      <workItem from="1757330689106" duration="5887000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -239,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757337578446</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="minor cahnges">
+      <option name="closed" value="true" />
+      <created>1757337738008</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757337738008</updated>
+    </task>
+    <task id="LOCAL-00020" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1757337945720</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1757337945720</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +299,8 @@
     <MESSAGE value="added images and more section for the about you page" />
     <MESSAGE value="added the footer for about us" />
     <MESSAGE value="made the why with us page" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the why with us page" />
+    <MESSAGE value="minor cahnges" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
 </project>
