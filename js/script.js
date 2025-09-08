@@ -12,12 +12,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
 });
 
-/* Simple, accessible slider */
+/* Infinite, smooth slider (hero + gallery) */
 class SimpleSlider {
     constructor(root) {
         this.root    = root;
         this.track   = root.querySelector('.slides');
-        this.slides  = Array.from(root.querySelectorAll('.slide'));
         this.prevBtn = root.querySelector('.prev');
         this.nextBtn = root.querySelector('.next');
 
@@ -27,16 +26,22 @@ class SimpleSlider {
         this.perView    = Math.max(1, parseInt(root.dataset.perView || '1', 10));
         this.gap        = Math.max(0, parseInt(root.dataset.gap || '16', 10)); // px
 
-        // State
-        this.total  = this.slides.length;
-        this.index  = 0;   // page index
-        this.timer  = null;
+        // Base state
+        this.timer       = null;
+        this.userTouched = false;
 
-        // Apply track gap
+        // Build once from the original children
+        this.originalSlides = Array.from(root.querySelectorAll('.slide'));
+        this.total          = this.originalSlides.length;
+
+        // Dots (based on logical windows, not clones)
+        if (root.dataset.dots === 'true') this.makeDots();
+
+        // Prepare track (gap for nice spacing)
         this.track.style.gap = this.gap + 'px';
 
-        // Dots
-        if (root.dataset.dots === 'true') this.makeDots();
+        // Infinite setup (clones)
+        this.setupInfinite();
 
         // Bind controls
         this.prevBtn?.addEventListener('click', () => this.go(-1));
@@ -51,11 +56,43 @@ class SimpleSlider {
         }
 
         // Resize handling
-        window.addEventListener('resize', () => { this.measure(); this.update(); });
+        window.addEventListener('resize', () => { this.measure(); this.snap(); });
 
-        // Init
+        // Init measurements and position
         this.measure();
-        this.update();
+        this.snap(); // go to current index without animation
+    }
+
+    setupInfinite() {
+        // Remove any previous clones (if any)
+        Array.from(this.track.querySelectorAll('.slide.is-clone')).forEach(n => n.remove());
+
+        // Clone last perView slides to the front, and first perView slides to the end
+        const n = Math.min(this.perView, this.total);
+        const firstN = this.originalSlides.slice(0, n).map(el => el.cloneNode(true));
+        const lastN  = this.originalSlides.slice(-n).map(el => el.cloneNode(true));
+
+        firstN.forEach(cl => { cl.classList.add('is-clone'); this.track.appendChild(cl); });
+        lastN.reverse().forEach(cl => { cl.classList.add('is-clone'); this.track.insertBefore(cl, this.track.firstChild); });
+
+        // Update slides collection to include clones
+        this.slides = Array.from(this.track.querySelectorAll('.slide'));
+
+        // Start index: after the prepended clones
+        this.index = n;
+
+        // Transition end handler for seamless looping
+        this.track.addEventListener('transitionend', () => {
+            // When we move into clones, jump back to the matching real index instantly
+            const n = Math.min(this.perView, this.total);
+            if (this.index < n) {
+                this.index += this.total;
+                this.snap(); // instant reposition
+            } else if (this.index >= this.total + n) {
+                this.index -= this.total;
+                this.snap();
+            }
+        }, { passive: true });
     }
 
     measure() {
@@ -64,14 +101,14 @@ class SimpleSlider {
         this.slides.forEach(s => { s.style.flex = `0 0 ${basis}`; });
 
         // Pixel math for precise translate
-        const rootW  = this.root.clientWidth;
-        const tileW  = (rootW - (this.perView - 1) * this.gap) / this.perView;
-        this.stepPx  = tileW + this.gap;
+        const rootW = this.root.clientWidth;
+        const tileW = (rootW - (this.perView - 1) * this.gap) / this.perView;
+        this.stepPx = tileW + this.gap;
 
-        // Number of windows/pages to loop over
+        // Pages for dots (logical windows, not counting clones)
         this.pages = Math.max(1, this.total - this.perView + 1);
 
-        // Responsive helper class
+        // Helper class for responsive overrides
         if (this.perView > 1) this.root.classList.add('multi');
         else this.root.classList.remove('multi');
     }
@@ -80,13 +117,18 @@ class SimpleSlider {
         const dots = document.createElement('div');
         dots.className = 'dots';
         this.dots = [];
-        const count = Math.max(1, this.total - this.perView + 1);
+        // Pages without clones
+        const count = Math.max(1, this.total - Math.max(1, this.perView) + 1);
         for (let i = 0; i < count; i++) {
             const dot = document.createElement('button');
             dot.className = 'dot';
             dot.type = 'button';
             dot.setAttribute('aria-label', `Go to set ${i + 1}`);
-            dot.addEventListener('click', () => { this.index = i; this.update(true); });
+            dot.addEventListener('click', () => {
+                const n = Math.min(this.perView, this.total);
+                this.index = n + i; // map dot directly into logical window (offset by prepended clones)
+                this.update(true);
+            });
             dots.appendChild(dot);
             this.dots.push(dot);
         }
@@ -106,16 +148,38 @@ class SimpleSlider {
     }
 
     go(step) {
-        // Looping carousel
-        this.index = (this.index + step + this.pages) % this.pages;
+        this.index += step;
         this.update(true);
     }
 
+    // Apply transform with animation
     update(user = false) {
-        const offset = this.index * this.stepPx;
-        this.track.style.transform = `translateX(-${offset}px)`;
-        this.dots?.forEach((d, i) => d.classList.toggle('active', i === this.index));
+        this.track.style.transition = 'transform .35s ease';
+        this.track.style.transform  = `translateX(-${this.index * this.stepPx}px)`;
+
+        // Update dots (map current index back to logical page 0..pages-1)
+        if (this.dots) {
+            const n = Math.min(this.perView, this.total);
+            const logical = ((this.index - n) % this.pages + this.pages) % this.pages;
+            this.dots.forEach((d, i) => d.classList.toggle('active', i === logical));
+        }
+
         if (user && this.autoplay) this.start();
+    }
+
+    // Reposition instantly (no animation) – used after resize & seamless wrap
+    snap() {
+        this.track.style.transition = 'none';
+        this.track.style.transform  = `translateX(-${this.index * this.stepPx}px)`;
+
+        // Keep dots in sync
+        if (this.dots) {
+            const n = Math.min(this.perView, this.total);
+            const logical = ((this.index - n) % this.pages + this.pages) % this.pages;
+            this.dots.forEach((d, i) => d.classList.toggle('active', i === logical));
+        }
+        // Force reflow to ensure next animated update works immediately
+        void this.track.offsetWidth;
     }
 }
 

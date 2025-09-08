@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="minor changes">
+    <list default="true" id="4ca7886e-664f-4ca4-bfb3-1a9efb108d56" name="Changes" comment="added the icon">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +95,7 @@
       <workItem from="1756929227404" duration="7528000" />
       <workItem from="1757065515277" duration="3418000" />
       <workItem from="1757156182475" duration="9599000" />
-      <workItem from="1757330689106" duration="5887000" />
+      <workItem from="1757330689106" duration="7303000" />
     </task>
     <task id="LOCAL-00001" summary="making the first page">
       <option name="closed" value="true" />
@@ -255,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757337945720</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added the icon">
+      <option name="closed" value="true" />
+      <created>1757338214442</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1757338214442</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +311,7 @@
     <MESSAGE value="made the why with us page" />
     <MESSAGE value="minor cahnges" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="added the icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the icon" />
   </component>
 </project>
